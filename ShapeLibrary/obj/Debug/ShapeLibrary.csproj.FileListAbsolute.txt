@@ -1,0 +1,5 @@
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\bin\Debug\ShapeLibrary.dll
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\bin\Debug\ShapeLibrary.pdb
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.dll
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.pdb

@@ -1,0 +1,170 @@
+﻿<Window x:Class="LibraryDemo.Views.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:LibraryDemo"
+		xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+		xmlns:viewModels="clr-namespace:LibraryDemo.ViewModels"
+		xmlns:converters="clr-namespace:LibraryDemo.Converters"
+		Height="450"
+		Width="800"
+		mc:Ignorable="d">
+	<Window.DataContext>
+		<viewModels:MainWindowViewModel />
+	</Window.DataContext>
+	<Window.Resources>
+		<converters:BoolToResponseConverter x:Key="BoolToResponseConverter" />
+	</Window.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Column="0"
+					VerticalAlignment="Center">
+			<TextBlock Style="{StaticResource BodyTextTextBlockStyle}"
+					   Text="Поиск площади треугольника по 3 сторонам:"
+					   Foreground="{StaticResource BlackBrush}"
+					   FontWeight="SemiBold"
+					   FontSize="16"
+					   HorizontalAlignment="Center"
+					   TextDecorations="Underline"
+					   Margin="0,20 " />
+
+			<StackPanel Orientation="Horizontal"
+						HorizontalAlignment="Center">
+				<TextBlock FontWeight="SemiBold"
+						   FontSize="16"
+						   VerticalAlignment="Center"
+						   Text="Первая сторона: "
+						   Margin="0,0,10,0" />
+				<TextBox Width="100"
+						 Text="0"
+						 Style="{StaticResource TextBoxStyle}"
+						 CaretBrush="{StaticResource WhiteBrush}"
+						 Background="{StaticResource BlackBrush}"
+						 Foreground="{StaticResource WhiteBrush}">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="TextChanged">
+							<i:InvokeCommandAction Command="{Binding FirstTriangleSideChangedCommand}"
+											   PassEventArgsToCommand="True" />
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</TextBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal"
+						HorizontalAlignment="Center"
+						Margin="0,20,0,0">
+				<TextBlock FontWeight="SemiBold"
+						   FontSize="16"
+						   VerticalAlignment="Center"
+						   Text="Вторая сторона: "
+						   Margin="0,0,10,0" />
+				<TextBox Width="100"
+						 Text="0"
+						 Style="{StaticResource TextBoxStyle}"
+						 CaretBrush="{StaticResource WhiteBrush}"
+						 Background="{StaticResource BlackBrush}"
+						 Foreground="{StaticResource WhiteBrush}">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="TextChanged">
+							<i:InvokeCommandAction Command="{Binding SecondTriangleSideChangedCommand}"
+												   PassEventArgsToCommand="True" />
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</TextBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal"
+						HorizontalAlignment="Center"
+						Margin="0,20,0,0">
+				<TextBlock FontWeight="SemiBold"
+						   FontSize="16"
+						   VerticalAlignment="Center"
+						   Text="Третья сторона: "
+						   Margin="0,0,10,0" />
+				<TextBox Width="100"
+						 Text="0"
+						 Style="{StaticResource TextBoxStyle}"
+						 CaretBrush="{StaticResource WhiteBrush}"
+						 Background="{StaticResource BlackBrush}"
+						 Foreground="{StaticResource WhiteBrush}">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="TextChanged">
+							<i:InvokeCommandAction Command="{Binding ThirdTriangleSideChangedCommand}"
+												   PassEventArgsToCommand="True" />
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</TextBox>
+			</StackPanel>
+
+			<TextBlock FontSize="18"
+					   FontWeight="SemiBold"
+					   HorizontalAlignment="Center"
+					   Margin="0,20,0,0">
+				<Run Text="Результат:" />
+				<Run Text="{Binding TriangleSquare, FallbackValue=0.0}" />
+			</TextBlock>
+
+			<TextBlock FontSize="18"
+					   FontWeight="SemiBold"
+					   HorizontalAlignment="Center"
+					   Margin="0,20,0,0">
+				<Run Text="Прямоугольный? — " />
+				<Run Text="{Binding IsTriangleRectangular, Converter={StaticResource BoolToResponseConverter}}" />
+			</TextBlock>
+		</StackPanel>
+
+		<Separator Grid.Column="1"
+				   Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+				   Width="3"
+				   Margin="5,0"
+				   Background="{StaticResource BlackBrush}" />
+
+		<StackPanel Grid.Column="2"
+					VerticalAlignment="Center">
+			<TextBlock Style="{StaticResource BodyTextTextBlockStyle}"
+					   Text="Поиск площади круга по радиусу:"
+					   Foreground="{StaticResource BlackBrush}"
+					   FontWeight="SemiBold"
+					   FontSize="16"
+					   HorizontalAlignment="Center"
+					   TextDecorations="Underline"
+					   Margin="0,20 " />
+
+			<StackPanel Orientation="Horizontal"
+						HorizontalAlignment="Center"
+						Margin="0,20,0,0">
+				<TextBlock FontWeight="SemiBold"
+						   FontSize="16"
+						   VerticalAlignment="Center"
+						   Text="Радиус: "
+						   Margin="0,0,10,0" />
+				<TextBox Width="100"
+						 Text="0"
+						 Style="{StaticResource TextBoxStyle}"
+						 CaretBrush="{StaticResource WhiteBrush}"
+						 Background="{StaticResource BlackBrush}"
+						 Foreground="{StaticResource WhiteBrush}">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="TextChanged">
+							<i:InvokeCommandAction Command="{Binding EllipseRadiusChangedCommand}"
+												   PassEventArgsToCommand="True" />
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</TextBox>
+			</StackPanel>
+
+			<TextBlock FontSize="18"
+					   FontWeight="SemiBold"
+					   HorizontalAlignment="Center"
+					   Margin="0,20,0,0">
+				<Run Text="Результат:" />
+				<Run Text="{Binding EllipseSquare, FallbackValue=0.0}" />
+			</TextBlock>
+		</StackPanel>
+	</Grid>
+</Window>

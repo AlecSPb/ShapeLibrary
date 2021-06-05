@@ -43,10 +43,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="EquationParser\Equation.cs" />
+    <Compile Include="EquationParser\Models\Constant.cs" />
+    <Compile Include="EquationParser\Models\EquationVariable.cs" />
+    <Compile Include="EquationParser\Models\IEquation.cs" />
+    <Compile Include="EquationParser\ConstraintRegion.cs" />
+    <Compile Include="EquationParser\SegmentData.cs" />
+    <Compile Include="EquationParser\SegmentType.cs" />
+    <Compile Include="Exceptions\EquationEvaluationException.cs" />
+    <Compile Include="Exceptions\EquationParsingException.cs" />
     <Compile Include="Exceptions\InvalidShapeException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\Ellipse\Ellipse.cs" />
     <Compile Include="Shapes\Ellipse\EllipseType.cs" />
+    <Compile Include="Shapes\General\GeneralShape.cs" />
+    <Compile Include="Shapes\General\UnknownShapeSettings.cs" />
     <Compile Include="Shapes\IShape.cs" />
     <Compile Include="Shapes\Polygon\Polygon.cs" />
     <Compile Include="Shapes\Shape.cs" />

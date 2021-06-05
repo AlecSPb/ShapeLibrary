@@ -43,11 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="Exceptions\InvalidShapeException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\Ellipse\Ellipse.cs" />
     <Compile Include="Shapes\Ellipse\EllipseType.cs" />
     <Compile Include="Shapes\IShape.cs" />
-    <Compile Include="Shapes\Polygon\ObservablePoint.cs" />
     <Compile Include="Shapes\Polygon\Polygon.cs" />
     <Compile Include="Shapes\Shape.cs" />
     <Compile Include="Shapes\ShapeType.cs" />

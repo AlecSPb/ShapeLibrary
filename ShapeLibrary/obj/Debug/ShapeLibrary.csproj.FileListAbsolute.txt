@@ -3,3 +3,4 @@ C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\bin\Debug\ShapeLibrary.
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.csproj.CoreCompileInputs.cache
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.dll
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.pdb
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary\obj\Debug\ShapeLibrary.csprojAssemblyReference.cache

@@ -23,9 +23,9 @@ namespace ShapeLibrary.Shapes.Polygon
 			return ShapeType.Polygon;
 		}
 
-		public override double CalculateSquare()
+		public override double CalculateArea()
 		{
-			return CalculateSquareByCoordinates();
+			return CalculateAreaByCoordinates();
 		}
 
 		private double CalculateDeterminant(Point first, Point second)
@@ -33,7 +33,7 @@ namespace ShapeLibrary.Shapes.Polygon
 			return first.X * second.Y - second.X * first.Y;
 		}
 
-		private double CalculateSquareByCoordinates()
+		private double CalculateAreaByCoordinates()
 		{
 			var vertices = new List<Point>(Points);
 			if (vertices.Count < 3)
@@ -47,7 +47,7 @@ namespace ShapeLibrary.Shapes.Polygon
 		}
 
 		/*
-		private double CalculateSquareByCoordinates()
+		private double CalculateAreaByCoordinates()
 		{
 			var points = new List<Point>(Points);
 

@@ -105,7 +105,7 @@
 					   HorizontalAlignment="Center"
 					   Margin="0,20,0,0">
 				<Run Text="Результат:" />
-				<Run Text="{Binding TriangleSquare, FallbackValue=0.0}" />
+				<Run Text="{Binding TriangleArea, FallbackValue=0.0}" />
 			</TextBlock>
 
 			<TextBlock FontSize="18"
@@ -162,7 +162,7 @@
 					   HorizontalAlignment="Center"
 					   Margin="0,20,0,0">
 				<Run Text="Результат:" />
-				<Run Text="{Binding EllipseSquare, FallbackValue=0.0}" />
+				<Run Text="{Binding EllipseArea, FallbackValue=0.0}" />
 			</TextBlock>
 		</StackPanel>
 	</Grid>

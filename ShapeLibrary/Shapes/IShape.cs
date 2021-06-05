@@ -2,8 +2,8 @@
 {
 	interface IShape
 	{
-		double Square { get; }
+		double Area { get; }
 		ShapeType ShapeType { get; }
-		double CalculateSquare();
+		double CalculateArea();
 	}
 }

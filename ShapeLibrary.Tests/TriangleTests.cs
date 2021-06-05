@@ -54,14 +54,14 @@ namespace ShapeLibrary.Tests
 		[TestCaseSource(nameof(AcceptableTestData))]
 		public void ReturnAcceptableValues(Triangle triangle, double expectedAreaValue)
 		{
-			var actualValue = triangle.Square;
+			var actualValue = triangle.Area;
 			Assert.AreEqual(expectedAreaValue, actualValue, AcceptableDelta);
 		}
 
 		[TestCaseSource(nameof(NotAcceptableTestData))]
 		public void AreSpecifiedTriangleDoesNotExist(Triangle triangle)
 		{
-			var actualValue = triangle.Square;
+			var actualValue = triangle.Area;
 			Assert.AreEqual(double.NaN, actualValue);
 		}
 

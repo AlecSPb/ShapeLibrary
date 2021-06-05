@@ -47,7 +47,7 @@ namespace ShapeLibrary.Tests
 		[TestCaseSource(nameof(AcceptableTestData))]
 		public void ReturnAcceptableValues(Ellipse triangle, double expectedAreaValue)
 		{
-			var actualValue = triangle.Square;
+			var actualValue = triangle.Area;
 			Assert.AreEqual(expectedAreaValue, actualValue, AcceptableDelta);
 		}
 

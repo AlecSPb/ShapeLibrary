@@ -31,36 +31,36 @@ namespace ShapeLibrary.Shapes.Ellipse
 			return ShapeType.Ellipse;
 		}
 
-		public override double CalculateSquare()
+		public override double CalculateArea()
 		{
 			switch (EllipseType)
 			{
 				case EllipseType.None:
 				case EllipseType.Circle:
-					return CalculateSquareForCircle();
+					return CalculateAreaForCircle();
 
 				case EllipseType.Oval:
-					return CalculateSquareForOval();
+					return CalculateAreaForOval();
 
 				case EllipseType.Custom:
-					return CalculateSquareForCustomEllipse();
+					return CalculateAreaForCustomEllipse();
 
 				default:
 					return 0.0d;
 			}
 		}
 
-		private double CalculateSquareForCircle()
+		private double CalculateAreaForCircle()
 		{
 			return Math.PI * Math.Pow(Radius, 2);
 		}
 
-		private double CalculateSquareForOval()
+		private double CalculateAreaForOval()
 		{
 			return 0.0d;
 		}
 
-		private double CalculateSquareForCustomEllipse()
+		private double CalculateAreaForCustomEllipse()
 		{
 			return 0.0d;
 		}

@@ -25,8 +25,8 @@ namespace LibraryDemo.ViewModels
 
 		private ICommand _ellipseRadiusChangedCommand;
 
-		private double _triangleSquare;
-		private double _ellipseSquare;
+		private double _triangleArea;
+		private double _ellipseArea;
 
 		public MainWindowViewModel()
 		{
@@ -43,8 +43,8 @@ namespace LibraryDemo.ViewModels
 
 			EllipseRadius = 0.0;
 
-			TriangleSquare = 0.0;
-			EllipseSquare = 0.0;
+			TriangleArea = 0.0;
+			EllipseArea = 0.0;
 		}
 
 		public double LengthFirstSide
@@ -97,22 +97,22 @@ namespace LibraryDemo.ViewModels
 			}
 		}
 
-		public double TriangleSquare
+		public double TriangleArea
 		{
-			get => _triangleSquare;
+			get => _triangleArea;
 			set
 			{
-				_triangleSquare = value;
+				_triangleArea = value;
 				RaisePropertyChanged();
 			}
 		}
 
-		public double EllipseSquare
+		public double EllipseArea
 		{
-			get => _ellipseSquare;
+			get => _ellipseArea;
 			set
 			{
-				_ellipseSquare = value;
+				_ellipseArea = value;
 				RaisePropertyChanged();
 			}
 		}
@@ -167,7 +167,7 @@ namespace LibraryDemo.ViewModels
 			if (CheckNumericSequence(textData))
 				LengthFirstSide = double.Parse(textData);
 
-			CalculateTriangleSquare();
+			CalculateTriangleArea();
 		}
 
 		private void HandleSecondTriangleSideChanged(TextChangedEventArgs eventArgs)
@@ -180,7 +180,7 @@ namespace LibraryDemo.ViewModels
 			if (CheckNumericSequence(textData))
 				LengthSecondSide = double.Parse(textData);
 
-			CalculateTriangleSquare();
+			CalculateTriangleArea();
 		}
 
 		private void HandleThirdTriangleSideChanged(TextChangedEventArgs eventArgs)
@@ -193,7 +193,7 @@ namespace LibraryDemo.ViewModels
 			if (CheckNumericSequence(textData))
 				LengthThirdSide = double.Parse(textData);
 
-			CalculateTriangleSquare();
+			CalculateTriangleArea();
 		}
 
 		private void HandleEllipseRadiusChanged(TextChangedEventArgs eventArgs)
@@ -206,7 +206,7 @@ namespace LibraryDemo.ViewModels
 			if (CheckNumericSequence(textData))
 				EllipseRadius = double.Parse(textData);
 
-			CalculateEllipseSquare();
+			CalculateEllipseArea();
 		}
 
 		private bool CheckNumericSequence(string value)
@@ -219,9 +219,9 @@ namespace LibraryDemo.ViewModels
 			return value.Replace('.', ',');
 		}
 
-		private void CalculateTriangleSquare()
+		private void CalculateTriangleArea()
 		{
-			TriangleSquare = Common.CalculateTriangleSquare(LengthFirstSide, LengthSecondSide, LengthThirdSide);
+			TriangleArea = Common.CalculateTriangleArea(LengthFirstSide, LengthSecondSide, LengthThirdSide);
 			UpdateIsTriangleRectangularState();
 		}
 
@@ -230,9 +230,9 @@ namespace LibraryDemo.ViewModels
 			IsTriangleRectangular = Common.DetermineWhetherTriangleIsRectangular(LengthFirstSide, LengthSecondSide, LengthThirdSide);
 		}
 
-		private void CalculateEllipseSquare()
+		private void CalculateEllipseArea()
 		{
-			EllipseSquare = Common.CalculateCircleSquare(EllipseRadius);
+			EllipseArea = Common.CalculateCircleArea(EllipseRadius);
 		}
 	}
 }

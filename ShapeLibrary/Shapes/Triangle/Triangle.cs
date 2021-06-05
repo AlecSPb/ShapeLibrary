@@ -25,9 +25,9 @@ namespace ShapeLibrary.Shapes.Triangle
 
 		public bool IsRectangular => CheckTriangleForSquareness();
 
-		public override double CalculateSquare()
+		public override double CalculateArea()
 		{
-			return CalculateTriangleSquareByThreeSides();
+			return CalculateTriangleAreaByThreeSides();
 		}
 
 		public override ShapeType GetShapeType()
@@ -35,12 +35,12 @@ namespace ShapeLibrary.Shapes.Triangle
 			return ShapeType.Triangle;
 		}
 
-		private double CalculateTriangleSquareByThreeSides()
+		private double CalculateTriangleAreaByThreeSides()
 		{
 			var semiPerimeter = (LengthFirstSide + LengthSecondSide + LengthThirdSide) / 2.0;
-			var square = Math.Sqrt(semiPerimeter * (semiPerimeter - LengthFirstSide) * (semiPerimeter - LengthSecondSide) * (semiPerimeter - LengthThirdSide));
+			var triangleArea = Math.Sqrt(semiPerimeter * (semiPerimeter - LengthFirstSide) * (semiPerimeter - LengthSecondSide) * (semiPerimeter - LengthThirdSide));
 
-			return square;
+			return triangleArea;
 		}
 
 		private double GetSideValueByTitle(TriangleSideTitle triangleSideTitle)
@@ -56,7 +56,6 @@ namespace ShapeLibrary.Shapes.Triangle
 				case TriangleSideTitle.Third:
 					return LengthThirdSide;
 
-				case TriangleSideTitle.None:
 				default:
 					return 0.0d;
 			}
@@ -99,7 +98,7 @@ namespace ShapeLibrary.Shapes.Triangle
 			var sumLegsSquares = Math.Pow(firstLeg, 2) + Math.Pow(secondLeg, 2);
 			var longestSideSquare = Math.Pow(GetSideValueByTitle(longestSide), 2);
 
-			var isTriangleRectangular = longestSideSquare == sumLegsSquares;
+			var isTriangleRectangular = Math.Abs(longestSideSquare - sumLegsSquares) < DoubleThreshold;
 
 			return isTriangleRectangular;
 		}

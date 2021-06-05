@@ -5,16 +5,16 @@ namespace ShapeLibrary
 {
 	public static class Common
 	{
-		public static double CalculateCircleSquare(double radius)
+		public static double CalculateCircleArea(double radius)
 		{
 			var ellipseData = new Ellipse(radius);
-			return ellipseData.Square;
+			return ellipseData.Area;
 		}
 
-		public static double CalculateTriangleSquare(double lengthFirstSide, double lengthSecondSide, double lengthThirdSide)
+		public static double CalculateTriangleArea(double lengthFirstSide, double lengthSecondSide, double lengthThirdSide)
 		{
 			var triangleData = new Triangle(lengthFirstSide, lengthSecondSide, lengthThirdSide);
-			return triangleData.Square;
+			return triangleData.Area;
 		}
 
 		public static bool DetermineWhetherTriangleIsRectangular(double lengthFirstSide, double lengthSecondSide, double lengthThirdSide)

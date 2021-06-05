@@ -91,7 +91,6 @@
     </Compile>
     <Compile Include="Commands\Base\CommandBase.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Controls\CustomTextBox.cs" />
     <Compile Include="Converters\BoolToResponseConverter.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />

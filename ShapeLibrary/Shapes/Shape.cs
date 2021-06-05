@@ -2,10 +2,12 @@
 {
 	public class Shape : IShape
 	{
-		public double Square => CalculateSquare();
+		public const double DoubleThreshold = 5e-4;
+
+		public double Area => CalculateArea();
 		public ShapeType ShapeType => GetShapeType();
 
-		public virtual double CalculateSquare()
+		public virtual double CalculateArea()
 		{
 			return 0.0d;
 		}

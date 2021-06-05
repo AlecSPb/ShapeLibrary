@@ -7,13 +7,13 @@
 	<Style x:Key="TextBoxStyle"
 		   TargetType="TextBox">
 		<Setter Property="FontSize"
-				Value="{StaticResource Configurator18FontSize}" />
+				Value="{StaticResource GreatFontSize}" />
 		<Setter Property="SnapsToDevicePixels"
 				Value="True" />
 		<Setter Property="FontFamily"
 				Value="{StaticResource RegularFontFamily}" />
 		<Setter Property="Background"
-				Value="White" />
+				Value="{StaticResource WhiteBrush}" />
 		<Setter Property="SelectionBrush"
 				Value="{StaticResource LightGrayBrush}" />
 		<Setter Property="Foreground"
@@ -43,10 +43,10 @@
 							BorderBrush="{TemplateBinding BorderBrush}"
 							CornerRadius="{StaticResource CornerRadius}"
 							Background="{TemplateBinding Background}">
-						<ScrollViewer Margin="{TemplateBinding Padding}"
+						<ScrollViewer x:Name="PART_ContentHost"
+									  Margin="{TemplateBinding Padding}"
 									  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-									  TextElement.Foreground="{TemplateBinding Foreground}"
-									  x:Name="PART_ContentHost" />
+									  TextElement.Foreground="{TemplateBinding Foreground}" />
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsEnabled"

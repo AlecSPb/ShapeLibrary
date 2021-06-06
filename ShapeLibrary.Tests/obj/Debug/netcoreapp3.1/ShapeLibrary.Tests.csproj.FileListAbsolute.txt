@@ -96,3 +96,5 @@ C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\obj\Debug\netcore
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\obj\Debug\netcoreapp3.1\ShapeLibrary.Tests.genruntimeconfig.cache
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\bin\Debug\netcoreapp3.1\ShapeLibrary.dll
 C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\bin\Debug\netcoreapp3.1\ShapeLibrary.pdb
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\bin\Debug\netcoreapp3.1\testhost.exe
+C:\Users\inmovery\source\repos\ShapeLibrary\ShapeLibrary.Tests\bin\Debug\netcoreapp3.1\nunit.engine.core.dll

@@ -10,6 +10,7 @@
 				<ResourceDictionary Source="Styles/StyledBrushes.xaml" />
 				<ResourceDictionary Source="Styles/FontStyles.xaml" />
 				<ResourceDictionary Source="Styles/TextBoxStyle.xaml" />
+				<ResourceDictionary Source="Styles/Buttons.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Application.Resources>

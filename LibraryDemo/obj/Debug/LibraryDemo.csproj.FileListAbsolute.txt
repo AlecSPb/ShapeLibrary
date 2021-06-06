@@ -26,3 +26,7 @@ C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\obj\Debug\GeneratedInter
 C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\bin\Debug\MathParser.org-mXparser.dll
+C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\obj\Debug\Views\CustomShapeWindow.g.cs
+C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\obj\Debug\Views\CustomShapeWindow.baml
+C:\Users\inmovery\source\repos\ShapeLibrary\LibraryDemo\obj\Debug\Styles\Buttons.baml

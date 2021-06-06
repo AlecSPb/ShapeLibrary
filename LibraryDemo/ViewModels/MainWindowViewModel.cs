@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Windows;
+﻿using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Input;
 using LibraryDemo.Commands;
 using LibraryDemo.ViewModels.Base;
+using LibraryDemo.Views;
 using ShapeLibrary;
-using ShapeLibrary.Shapes.Triangle;
 
 namespace LibraryDemo.ViewModels
 {
@@ -25,6 +23,8 @@ namespace LibraryDemo.ViewModels
 
 		private ICommand _ellipseRadiusChangedCommand;
 
+		private ICommand _openWindowForCheckCustomShapeCommand;
+
 		private double _triangleArea;
 		private double _ellipseArea;
 
@@ -35,6 +35,8 @@ namespace LibraryDemo.ViewModels
 			ThirdTriangleSideChangedCommand = new RelayCommand<TextChangedEventArgs>(HandleThirdTriangleSideChanged);
 
 			EllipseRadiusChangedCommand = new RelayCommand<TextChangedEventArgs>(HandleEllipseRadiusChanged);
+
+			OpenWindowForCheckCustomShapeCommand = new RelayCommand(OpenWindowForCheckCustomShape);
 
 			LengthFirstSide = 0.0;
 			LengthSecondSide = 0.0;
@@ -157,6 +159,16 @@ namespace LibraryDemo.ViewModels
 			}
 		}
 
+		public ICommand OpenWindowForCheckCustomShapeCommand
+		{
+			get => _openWindowForCheckCustomShapeCommand;
+			set
+			{
+				_openWindowForCheckCustomShapeCommand = value;
+				RaisePropertyChanged();
+			}
+		}
+
 		private void HandleFirstTriangleSideChanged(TextChangedEventArgs eventArgs)
 		{
 			var value = eventArgs.Source as TextBox;
@@ -207,6 +219,12 @@ namespace LibraryDemo.ViewModels
 				EllipseRadius = double.Parse(textData);
 
 			CalculateEllipseArea();
+		}
+
+		private void OpenWindowForCheckCustomShape()
+		{
+			var customShapeWindow = new CustomShapeWindow();
+			customShapeWindow.Show();
 		}
 
 		private bool CheckNumericSequence(string value)

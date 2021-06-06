@@ -1,7 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
 using ShapeLibrary.Shapes.Ellipse;
-using ShapeLibrary.Shapes.Triangle;
 
 namespace ShapeLibrary.Tests
 {
@@ -45,24 +44,10 @@ namespace ShapeLibrary.Tests
 		};
 
 		[TestCaseSource(nameof(AcceptableTestData))]
-		public void ReturnAcceptableValues(Ellipse triangle, double expectedAreaValue)
+		public void ReturnAcceptableValues(Ellipse ellipse, double expectedAreaValue)
 		{
-			var actualValue = triangle.Area;
+			var actualValue = ellipse.Area;
 			Assert.AreEqual(expectedAreaValue, actualValue, AcceptableDelta);
-		}
-
-		[Test]
-		public void DetermineWhetherTriangleIsRectangular_ReturnTrue()
-		{
-			var triangle = new Triangle(3, 4, 5);
-			Assert.AreEqual(true, triangle.IsRectangular);
-		}
-
-		[Test]
-		public void DetermineWhetherTriangleIsRectangular_ReturnFalse()
-		{
-			var triangle = new Triangle(3, 6, 5);
-			Assert.AreEqual(false, triangle.IsRectangular);
 		}
 	}
 }

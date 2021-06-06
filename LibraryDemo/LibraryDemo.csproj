@@ -105,6 +105,7 @@
     <Compile Include="Controls\Canvas\CanvasControl.cs" />
     <Compile Include="Controls\Canvas\CanvasControlViewModel.cs" />
     <Compile Include="Converters\BoolToResponseConverter.cs" />
+    <Compile Include="Converters\DoubleValueToValidResponseConverter.cs" />
     <Compile Include="Models\Constraint.cs" />
     <Compile Include="Models\AxisConstraintType.cs" />
     <Compile Include="Models\Equation.cs" />

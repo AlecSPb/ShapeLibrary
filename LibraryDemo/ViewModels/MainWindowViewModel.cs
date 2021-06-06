@@ -229,7 +229,13 @@ namespace LibraryDemo.ViewModels
 
 		private bool CheckNumericSequence(string value)
 		{
-			return value.All(char.IsDigit);
+			var delimiters = new char[]
+			{
+				'.',
+				','
+			};
+
+			return value.All(char.IsDigit) || value.Any(symbol => delimiters.Contains(symbol));
 		}
 
 		private string ReplaceDots(string value)

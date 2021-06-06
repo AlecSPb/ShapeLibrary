@@ -14,6 +14,7 @@
 	</Window.DataContext>
 	<Window.Resources>
 		<converters:BoolToResponseConverter x:Key="BoolToResponseConverter" />
+		<converters:DoubleValueToValidResponseConverter x:Key="DoubleValueToValidResponseConverter" />
 	</Window.Resources>
 	<Grid>
 		<Grid.ColumnDefinitions>
@@ -118,7 +119,7 @@
 					   HorizontalAlignment="Center"
 					   Margin="0,20,0,0">
 				<Run Text="Результат:" />
-				<Run Text="{Binding TriangleArea, FallbackValue=0.0}" />
+				<Run Text="{Binding TriangleArea, FallbackValue=0.0, Converter={StaticResource DoubleValueToValidResponseConverter}}" />
 			</TextBlock>
 
 			<TextBlock FontSize="18"
